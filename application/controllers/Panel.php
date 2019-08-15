@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set ( 'America/Caracas' );
+define ('__CONTROLADOR', 'Panel');
 class Panel extends CI_Controller {
 
 	/**
@@ -19,13 +20,14 @@ class Panel extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function __contructor(){
+	public function __construct(){
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('session');		
 		if(!isset($_SESSION['usuario']))$this->salir();
 	}
 	public function index(){
+		//echo  base_url();
 		$this->load->view('gestion/home');
 		
 	}

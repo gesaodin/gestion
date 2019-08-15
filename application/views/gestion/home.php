@@ -1,5 +1,5 @@
 
-      
+      <?php $this->load->view('gestion/inc/cabecera.php');?>
       <div class="row">
         <!-- Default box -->
         <div class="col-md-8">
@@ -248,3 +248,5 @@
         </div>
         <!-- /.box -->
     </div>
+
+    <?php $this->load->view('gestion/inc/pie.php');?>

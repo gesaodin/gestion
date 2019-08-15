@@ -234,13 +234,14 @@ class Usuario extends CI_Model {
 
   function conectar() {    
     $consulta = 'SELECT 
-        usuario.id, usuario.login, usuario.nombre, usuario.apellido, usuario.correo,
+        usuario.oid, usuario.login, usuario.nombre, usuario.apellido, usuario.correo,
         usuario.status_id
       FROM usuario 
        
-      WHERE login=\'' . $this -> sobreNombre . '\' AND password =\'' . $this -> _claveEncriptada() . '\' AND status_id = 292;';
+      WHERE login=\'' . $this -> sobreNombre . '\' AND password =\'' . $this -> _claveEncriptada() . '\';';
         
     $obj = $this->Dbpace->consultar($consulta);
+    print_r($obj);
     return $obj;
   }
 

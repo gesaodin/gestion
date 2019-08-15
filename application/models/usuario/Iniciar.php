@@ -53,17 +53,6 @@ class Iniciar extends CI_Model {
         'ultimaConexion' => '', //$usuario->ultimaConexion()
       )
     );
-   /**
-    $this->load->model('comun/Dbipsfa');
-    $arr = array(
-      'cedu' => $usuario->cedula,
-      'obse' => 'Inicio de Sesión',
-      'fech' => 'now()',
-      'app' => 'Panel',
-      'tipo' => 0
-      );
-
-    $this->Dbipsfa->insertarArreglo('bss.traza', $arr);**/
   }
 
   private function _salir() {

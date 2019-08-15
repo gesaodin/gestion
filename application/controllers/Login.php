@@ -50,7 +50,7 @@ class Login extends CI_Controller {
 	 */	
 	public function validarUsuario(){		
 		if(isset($_POST['usuario']) && $_POST['usuario'] != ""){
-			
+			echo "Ujule";
 			$this->load->model('usuario/Iniciar');
 			$valores["usuario"] = $_POST['usuario'];
 			$valores["clave"] = $_POST['clave'];
@@ -61,6 +61,7 @@ class Login extends CI_Controller {
 				echo "Error en el usuario con la base de datos";
 			}
 		}else{
+			//echo "Error en el usuario con la base de datos";
 			$this->salir();
 		}
 	
@@ -123,7 +124,7 @@ class Login extends CI_Controller {
 	}
   	public function salir(){
   		session_destroy();
-  		$this->load->view('login');
+  		$this->load->view("gestion/login");
   	}
   	
 	function __destruct(){
