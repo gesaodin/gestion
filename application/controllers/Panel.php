@@ -44,4 +44,14 @@ class Panel extends CI_Controller {
 	public function establecerSueldos(){
 		
 	}
+
+	public function consultarTrabajador($id = ''){
+
+		header('Content-Type: application/json');
+		$this->load->model('trabajador/MPersona');
+
+		$this->MPersona->obtenerID($cedula);
+		echo json_encode($this->MPersona);
+
+	}
 }
