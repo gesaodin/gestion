@@ -30,6 +30,7 @@ class Panel extends CI_Controller {
 		$this->load->model('comun/MGerencia');
 
 		$data['gerencia'] = $this->MGerencia->listar();
+		$data['puerto'] = $this->MGerencia->listarPuerto();
 		$this->load->view('gestion/home', $data);
 		
 	}

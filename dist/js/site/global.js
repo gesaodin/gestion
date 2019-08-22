@@ -13,6 +13,8 @@ function consultar(){
         $("#nombre").val(Trabajador.nombres);
         $("#fechana").val(Trabajador.fechanacimiento);
         $("#gerencia").val(Trabajador.unidadadscripcion);
+        $("#puerto").val(Trabajador.puertoadscripcion);
+        $("#nivelriesgo").val(Trabajador.nivelriesgo);
         
     } );
 

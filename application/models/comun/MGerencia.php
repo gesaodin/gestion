@@ -34,4 +34,11 @@ class MGerencia extends CI_Model {
 	return $obj->rs;
   }
 
+  public function listarPuerto(){
+    $sConsulta = "SELECT * FROM puerto";
+    $obj = $this->DBpace->consultar($sConsulta);
+
+	return $obj->rs;
+  }
+
 }

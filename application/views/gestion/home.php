@@ -139,7 +139,7 @@
                         </div>
                       </div>
     
-                      <div class="col-md-5">
+                      <div class="col-md-7">
                           <div class="form-group">
                             <label for="lugar">Cargo Base </label>
                             <select class="form-control" id="gerencia">
@@ -152,18 +152,22 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                              <label for="lugar">Nivel </label>
-                              <select class="form-control">
-                                  <option>Nivel 1</option>
-                                  
-                              </select>
-                            </div>
-                          </div>
+                      
                   </div>
     
                   <div class="row">
+                  <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="lugar">Nivel </label>
+                              <select class="form-control" id="nivelriesgo">
+                                  <option value=""></option>
+                                  <option value="ALTO">ALTO</option>
+                                  <option value="MEDIO">MEDIO</option>
+                                  <option value="MUY ALTO">MUY ALTO</option>
+                                  <option value="BAJO">BAJO</option>
+                              </select>
+                            </div>
+                          </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="lugar">Condición Laboral </label>
@@ -176,8 +180,12 @@
                       <div class="col-md-4">
                           <div class="form-group">
                             <label for="puerto">Puerto de Adscripción </label>
-                            <select class="form-control">
-                                <option>SEDE</option>
+                            <select class="form-control" id="puerto">
+                            <?php
+                                    foreach ($puerto as $k => $v) {
+                                      echo '<option value="' . $v->nombre . '">' . $v->nombre . '</option>';
+                                    }
+                                  ?>
                                 
                             </select>
                           </div>
