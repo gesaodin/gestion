@@ -17,7 +17,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>G</b>HH</span>
       <!-- logo for regular state and mobile devices -->
@@ -44,12 +44,11 @@
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
-                <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li><!-- start message -->
+                  <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="<?php echo base_url()?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -58,7 +57,6 @@
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  <!-- end message -->
                 </ul>
               </li>
               <li class="footer"><a href="#">See All Messages</a></li>
@@ -121,13 +119,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/avatar.png" class="user-image" alt="User Image">
+              <img src="<?php echo base_url()?>dist/img/avatar.png" class="user-image" alt="User Image">
               <span class="hidden-xs">Administrador</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url()?>dist/img/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
                   Administrador - Web Developer
@@ -164,7 +162,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url()?>dist/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Administrador</p>
@@ -174,9 +172,9 @@
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Consultar...">
+          <input type="text" id="txtValor" class="form-control" placeholder="Consultar...">
           <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                <button type="button" name="search" id="search-btn" onClick="consultar()" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
               </span>
         </div>
@@ -184,7 +182,7 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">MENU NAVEGACIÓN</li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Principal</span>

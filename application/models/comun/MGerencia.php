@@ -17,7 +17,7 @@ if (!defined('BASEPATH'))
 
 
 
-class MPersona extends CI_Model {
+class MGerencia extends CI_Model {
 
   var $token = null;
 
@@ -27,11 +27,11 @@ class MPersona extends CI_Model {
     
   }
 
-  public function obtenerID($id = ''){
-    $sConsulta = "SELECT * FROM trabajador where cedula='$id'";
+  public function listar(){
+    $sConsulta = "SELECT * FROM gerencia";
     $obj = $this->DBpace->consultar($sConsulta);
 
-	  return $obj->rs[0];
+	return $obj->rs;
   }
 
 }

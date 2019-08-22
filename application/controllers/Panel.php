@@ -27,8 +27,10 @@ class Panel extends CI_Controller {
 		if(!isset($_SESSION['usuario']))$this->salir();
 	}
 	public function index(){
-		//echo  base_url();
-		$this->load->view('gestion/home');
+		$this->load->model('comun/MGerencia');
+
+		$data['gerencia'] = $this->MGerencia->listar();
+		$this->load->view('gestion/home', $data);
 		
 	}
 	
@@ -45,13 +47,13 @@ class Panel extends CI_Controller {
 		
 	}
 
-	public function consultarTrabajador($id = ''){
+	public function consultarTrabajador($cedula = ''){
 
 		header('Content-Type: application/json');
 		$this->load->model('trabajador/MPersona');
 
-		$this->MPersona->obtenerID($cedula);
-		echo json_encode($this->MPersona);
+		$Persona = $this->MPersona->obtenerID($cedula);
+		echo json_encode($Persona);
 
 	}
 }

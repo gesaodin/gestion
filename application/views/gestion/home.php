@@ -39,7 +39,7 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <label for="lugar">Fecha Nacimiento</label>
-                      <input type="text" class="form-control" id="lugar" placeholder="lugar">
+                      <input type="text" class="form-control" id="fechana" placeholder="lugar">
                     </div>
                   </div>
                 </div>
@@ -142,8 +142,12 @@
                       <div class="col-md-5">
                           <div class="form-group">
                             <label for="lugar">Cargo Base </label>
-                            <select class="form-control">
-                                <option>Gerencia de Gestion Humana</option>
+                            <select class="form-control" id="gerencia">
+                            <?php
+                                    foreach ($gerencia as $k => $v) {
+                                      echo '<option value="' . $v->nombre . '">' . $v->nombre . '</option>';
+                                    }
+                                  ?>
                                 
                             </select>
                           </div>
