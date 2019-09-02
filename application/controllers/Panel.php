@@ -57,4 +57,9 @@ class Panel extends CI_Controller {
 		echo json_encode($Persona);
 
 	}
+
+	public function salir(){
+		session_destroy();
+		$this->load->view("gestion/login");
+	}
 }

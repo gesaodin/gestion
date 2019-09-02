@@ -19,6 +19,8 @@ if (!defined('BASEPATH'))
 
 class MPersona extends CI_Model {
 
+  var $DatosBasicos = null;
+  var $Familiares = null;
   var $token = null;
 
   function __construct() {
@@ -30,8 +32,17 @@ class MPersona extends CI_Model {
   public function obtenerID($id = ''){
     $sConsulta = "SELECT * FROM trabajador where cedula='$id'";
     $obj = $this->DBpace->consultar($sConsulta);
-
-	  return $obj->rs[0];
+    $this->DatosBasicos = $obj->rs[0];
+    $this->Familiares = $this->obtenerFamiliares($id);
+	  return $this;
   }
+
+  public function obtenerFamiliares($id){
+    $sConsulta = "SELECT * FROM hcm where cedula='$id'";
+    $obj = $this->DBpace->consultar($sConsulta);
+
+	  return $obj->rs;
+  }
+
 
 }

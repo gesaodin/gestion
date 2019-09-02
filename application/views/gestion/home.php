@@ -158,7 +158,7 @@
                   <div class="row">
                   <div class="col-md-4">
                             <div class="form-group">
-                              <label for="lugar">Nivel </label>
+                              <label for="lugar">Nivel de Riesgo </label>
                               <select class="form-control" id="nivelriesgo">
                                   <option value=""></option>
                                   <option value="ALTO">ALTO</option>
@@ -213,15 +213,28 @@
                         </div>
                   </div>
     
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label for="lugar">Cuenta Bancaria</label>
-                          <input type="text" class="form-control" id="lugar" placeholder="lugar" maxlength="20">
-                        </div>
+                <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="lugar">Cuenta Bancaria</label>
+                        <input type="text" class="form-control" id="lugar" placeholder="lugar" maxlength="20">
                       </div>
-                  </div>
+                    </div>
+                </div>
     
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Datos Familiares</h3>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="divFamilia">
+                        
+                    </div>
+                    
+                  </div>
+  
+
 
             </div>
             <!-- /.box-body 9437012r -->
